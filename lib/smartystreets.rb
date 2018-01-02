@@ -105,6 +105,6 @@ module SmartyStreets
   end
 
   def self.zipcode_api_url
-    defined?(@@api_url) ? @@api_url : 'https://us-zipcode.api.smartystreets.com'
+    'https://us-zipcode.api.smartystreets.com'
   end
 end
