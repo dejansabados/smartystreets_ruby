@@ -35,7 +35,7 @@ module SmartyStreets
       @candidates = get_optional_fixnum(hash, :candidates)
     end
 
-    def convert_to_json(*a)
+    def to_json(*a)
       hash = Hash.new
       hash[:input_id] = input_id if input_id
       hash[:street] = street if street
