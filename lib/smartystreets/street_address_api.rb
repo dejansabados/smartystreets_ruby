@@ -65,7 +65,7 @@ module SmartyStreets
     end
 
     def self.street_address_responses(response)
-      #raise ApiError.from_code(response.code) unless response.code == 200
+      raise ApiError.from_code(response.code) unless response.code == 200
       MultiJson.load(response.body, :symbolize_keys => true).map do |response_element|
         StreetAddressResponse.new(response_element)
       end
